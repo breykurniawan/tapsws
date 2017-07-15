@@ -17,8 +17,7 @@ Public Class FrmUserLogin
 
     Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
         'Sign In
-
-        If Not IsEmptyText(New DevExpress.XtraEditors.TextEdit() {TextEdit1, TextEdit2}) Then
+                If Not IsEmptyText(New DevExpress.XtraEditors.TextEdit() {TextEdit1, TextEdit2}) Then
             If TextEdit1.Text = My.Settings.UserSetup And TextEdit2.Text = My.Settings.UserPass Then
                 config = True
                 TblLogin = "Sign Out"
@@ -66,7 +65,7 @@ Public Class FrmUserLogin
         'GET GROUP
         Try
             FrmMain.NavBarControl1.BeginUpdate()
-            SQL = "SELECT DISTINCT ACCESSID,MENU FROM V_MENUBAR WHERE USERID='" & USERNAME & "' AND TYPE=0 ORDER BY ACCESSID"
+            SQL = "SELECT DISTINCT URUT,ACCESSID,MENU FROM V_MENUBAR WHERE USERID='" & USERNAME & "' AND TYPE=0 ORDER BY URUT,ACCESSID"
 
             Dim DTG As DataTable = ExecuteQuery(SQL)
             Dim N As Integer = 0
@@ -84,7 +83,7 @@ Public Class FrmUserLogin
                     'group.SmallImage = ImgGrp.Images(GetImgGrp(hdr))
                     group.SmallImage = FrmMain.ImgGrp.Images(hd)
                     'GET ITEM
-                    SQL = "SELECT DISTINCT ACCESSID,MENU FROM V_MENUBAR WHERE USERID='" & USERNAME & "' AND GROUPMENU='" + hdr + "' AND TYPE=1 ORDER BY ACCESSID ASC"
+                    SQL = "SELECT DISTINCT URUT,ACCESSID,MENU FROM V_MENUBAR WHERE USERID='" & USERNAME & "' AND GROUPMENU='" + hdr + "' AND TYPE=1 ORDER BY URUT,ACCESSID ASC"
                     Dim DTSUB As DataTable = ExecuteQuery(SQL)
                     Dim I As Integer = 0
                     Dim DRSUB As New DataTableReader(DTSUB)

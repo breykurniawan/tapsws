@@ -91,7 +91,7 @@ Public Class FrmRoleAccesRight
         If ComboBoxEdit1.Text <> "" Then
             Dim ROLEID As String = GetCodeRole(ComboBoxEdit1.Text)
             'SQL = "Select NVL(b.ACCESSID, a.ACCESSID) As GROUP_ID,NVL(B.ACCESSNAME,A.ACCESSNAME) As GROUP_NAME " +
-            SQL = "SELECT CONCAT(CONCAT(NVL(b.ACCESSID, a.ACCESSID),':'),NVL(B.ACCESSNAME,A.ACCESSNAME)) As GROUP_NAME " +
+            SQL = "SELECT CONCAT(CONCAT(B.URUT,'.'),NVL(B.ACCESSNAME,A.ACCESSNAME)) As GROUP_NAME " +
             ",A.ACCESSID As MENUID,A.ACCESSNAME As MENU, " +
             " Case a.TYPE " +
             " WHEN '0' THEN 'GROUP' " +
@@ -109,11 +109,9 @@ Public Class FrmRoleAccesRight
             " Left Join T_ACCESSRIGHTS B On A.PARENTID=B.ACCESSID " +
             " WHERE  A.TYPE=1" +
             " ORDER BY A.ACCESSID, b.ACCESSNAME "
-
-
         Else
             'SQL = "Select NVL(b.ACCESSID, a.ACCESSID) As GROUP_ID,NVL(B.ACCESSNAME,A.ACCESSNAME) As GROUP_NAME" +
-            SQL = "SELECT CONCAT(CONCAT(NVL(b.ACCESSID, a.ACCESSID),':'),NVL(B.ACCESSNAME,A.ACCESSNAME)) As GROUP_NAME " +
+            SQL = "SELECT CONCAT(CONCAT(B.URUT,'.'),NVL(B.ACCESSNAME,A.ACCESSNAME)) As GROUP_NAME " +
                 ",A.ACCESSID As MENUID,A.ACCESSNAME As MENU, " +
             " Case a.TYPE " +
             " WHEN '0' THEN 'GROUP' " +
@@ -135,7 +133,7 @@ Public Class FrmRoleAccesRight
         PanelControl1.Width = Me.Width - (GridControl2.Width + Panel1.Width + 10)
     End Sub
 
-    Private Sub ComboBoxEdit1_SelectedIndexChanged(sender As Object, e As EventArgs)
+    Private Sub ComboBoxEdit1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBoxEdit1.SelectedIndexChanged
         LoadRoleMember(ComboBoxEdit1.Text)
         LoadRoleMenu(ComboBoxEdit1.Text)
     End Sub

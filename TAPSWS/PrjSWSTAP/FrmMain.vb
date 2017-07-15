@@ -42,8 +42,6 @@ Public Class FrmMain
                     End If
                     Close()
                 End If
-            Case "UBAH SANDI"
-                FrmChildShow(FrmChangePassword)
             Case <> "EXIT"
                 'PANGGIL FORM BY DATA BASE (T_ACCESRIGHT)
                 'BATASI HANYA 1 FORM YANG DAPAT DI PANGGIL DI EVENT YANG SAMA

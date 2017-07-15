@@ -57,7 +57,7 @@ Public Class FrmDriver
     End Sub
     Private Sub GridHeader()
         Dim view As ColumnView = CType(GridControl8.MainView, ColumnView)
-        Dim fieldNames() As String = New String() {"DRIVER_CODE,TRANSPORTER_CODE,DRIVER_NAME,SIM,INACTIVE,INACTIVEDATE,STATUS"}
+        Dim fieldNames() As String = New String() {"DRIVER_CODE", "TRANSPORTER_CODE", "DRIVER_NAME", "SIM"}
         Dim I As Integer
         Dim Column As DevExpress.XtraGrid.Columns.GridColumn
 
@@ -67,15 +67,15 @@ Public Class FrmDriver
             Column.VisibleIndex = I
         Next
 
-        Dim repItemGraphicsEdit As New DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit
-        repItemGraphicsEdit.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze
-        repItemGraphicsEdit.BestFitWidth = 50
-        view.Columns("IMAGE").ColumnEdit = repItemGraphicsEdit
+        'Dim repItemGraphicsEdit As New DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit
+        'repItemGraphicsEdit.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze
+        'repItemGraphicsEdit.BestFitWidth = 50
+        'view.Columns("IMAGE").ColumnEdit = repItemGraphicsEdit
 
         'GROUPING
         Dim GridView As GridView = CType(GridControl8.FocusedView, GridView)
         GridView.SortInfo.ClearAndAddRange(New GridColumnSortInfo() {
-        New GridColumnSortInfo(GridView.Columns("ROLENAME"), DevExpress.Data.ColumnSortOrder.Ascending)}, 1)
+        New GridColumnSortInfo(GridView.Columns("TRANSPORTER_CODE"), DevExpress.Data.ColumnSortOrder.Ascending)}, 1)
         GridView.BestFitColumns()
         GridView.ExpandAllGroups()
 
