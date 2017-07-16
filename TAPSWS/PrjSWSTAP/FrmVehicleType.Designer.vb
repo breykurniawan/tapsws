@@ -226,6 +226,7 @@ Partial Class FrmVehicleType
         Me.Controls.Add(Me.PanelControl6)
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.BunifuGradientPanel2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmVehicleType"
         Me.Text = "FrmVehicleType"
         Me.BunifuGradientPanel2.ResumeLayout(False)

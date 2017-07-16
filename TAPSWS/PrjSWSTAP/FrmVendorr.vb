@@ -78,44 +78,50 @@ Public Class FrmVendorr
 
     Private Sub SimpleButton2_Click(sender As Object, e As EventArgs) Handles SimpleButton2.Click
         'SAVE VENDOR
-        If Not IsEmptyText({TextEdit6, TextEdit58, TextEdit56, TextEdit53, TextEdit57, TextEdit55, TextEdit54, TextEdit52, TextEdit50, TextEdit47, TextEdit51, TextEdit49, TextEdit48, TextEdit95, TextEdit13, TextEdit9, ComboBoxEdit2, TextEdit8}) Then
-            Dim VENCODE As String = TextEdit6.Text
-            Dim VENNAME As String = TextEdit58.Text
-            Dim NPWP As String = TextEdit56.Text
-            Dim EMAIL As String = TextEdit53.Text
-            Dim ADDRESS As String = TextEdit57.Text
-            Dim POSTCODE As String = TextEdit55.Text
-            Dim STATE As String = TextEdit54.Text
-            Dim COUNTRY As String = TextEdit52.Text
-            Dim PHONE As String = TextEdit50.Text
-            Dim MPHONE As String = TextEdit47.Text
-            Dim FAX As String = TextEdit51.Text
-            Dim CP As String = TextEdit49.Text
-            Dim BANKACC As String = TextEdit48.Text
-            Dim ACCOUNTGROUP As String = TextEdit95.Text
-            Dim ACCOUNTGROUPN As String = TextEdit13.Text
-            Dim INPUT_BY As String = USERNAME
-            Dim INPUT_DATE As String = Now
-            Dim UPDATE_BY As String = USERNAME
-            Dim UPDATE_DATE As String = Now
-            Dim INACTIVEDATE As String = Now
-            Dim ISACTIVE As String = ComboBoxEdit2.SelectedItem
-            Dim STATUS As String = TextEdit8.Text
-            If CheckRecord(SQL) = 0 Then
-                SQL = "INSERT INTO T_VENDOR (VENDOR_CODE,VENDOR_NAME,NPWP,EMAIL,ADDRESS,POSTAL_CODE,STATE,COUNTRY,PHONE,MOBILEPHONE,FAX,CONTRACTPERSON,BANKACCOUNT,ACCOUNTGROUP,ACCOUNTGROUPN,INPUTBY,INPUTDATE,UPDATENY,UPDATEDATE,INACTIVEDATE,ISACTIVE,STATUS)" +
-                    "VALUES('" & VENCODE & "','" & VENNAME & "','" & NPWP & "','" & EMAIL & "','" & ADDRESS & "','" & POSTCODE & "','" & STATE & "','" & COUNTRY & "','" & PHONE & "','" & MPHONE & "','" & FAX & "','" & CP & "','" & BANKACC & "','" & ACCOUNTGROUP & "','" & ACCOUNTGROUPN & "','" & ISACTIVE & "','" & STATUS & "',)"
-                ExecuteNonQuery(SQL)
-                SQL = "SELECT FROM T_VENDOR WHERE VENDOR_CODE='" & TextEdit6.Text & "'"
-                If CheckRecord(SQL) > 0 Then UpdateCode("VN")
-                LoadView()
-                MsgBox("SAVE SUCCEDED", vbInformation, "VEHICLE_CODE")
-                UnlockAll()
-                ClearInputVN()
-            Else
-                SQL = "UPDATE T_VENDOR SET VENDOR_CODE='" & VENCODE & "',VENDOR_NAME='" & VENNAME & "',NPWP='" & NPWP & "',EMAIL='" & EMAIL & "',ADDRESS='" & ADDRESS & "',POSTAL_CODE='" & POSTCODE & "',STATE='" & STATE & "',COUNTRY='" & COUNTRY & "',PHONE='" & PHONE & "',MOBILEPHONE='" & MPHONE & "',FAX='" & FAX & "',CONTACTPERSON='" & CP & "',,BANKACCOUNT='" & BANKACC & "',ACCOUNTGROUP='" & ACCOUNTGROUP & "',ACCOUNTGROUPN='" & ACCOUNTGROUPN & "',INACTIVEDATE='" & INACTIVEDATE & "',ISACTIVE='" & ISACTIVE & "',STATUS='" & STATUS & "'" +
-                   " WHERE VENDOR_CODE= '" & TextEdit6.Text & "'"
-                ExecuteNonQuery(SQL)
-                MsgBox("SAVE SUCCEDED", vbInformation, "VENDOR")
+        If Not IsEmptyText({TextEdit6, TextEdit58, TextEdit56, TextEdit53, TextEdit57, TextEdit55, TextEdit54, TextEdit52, TextEdit50, TextEdit47, TextEdit51, TextEdit49, TextEdit48, TextEdit95, TextEdit13, TextEdit9, TextEdit8}) = True Then
+            If Not IsEmptyCombo({ComboBoxEdit2}) = True Then
+                Dim VENCODE As String = TextEdit6.Text
+                Dim VENNAME As String = TextEdit58.Text
+                Dim NPWP As String = TextEdit56.Text
+                Dim EMAIL As String = TextEdit53.Text
+                Dim ADDRESS As String = TextEdit57.Text
+                Dim POSTCODE As String = TextEdit55.Text
+                Dim STATE As String = TextEdit54.Text
+                Dim COUNTRY As String = TextEdit52.Text
+                Dim PHONE As String = TextEdit50.Text
+                Dim MPHONE As String = TextEdit47.Text
+                Dim FAX As String = TextEdit51.Text
+                Dim CP As String = TextEdit49.Text
+                Dim BANKACC As String = TextEdit48.Text
+                Dim ACCOUNTGROUP As String = TextEdit95.Text
+                Dim ACCOUNTGROUPN As String = TextEdit13.Text
+                Dim INPUT_BY As String = USERNAME
+                Dim INPUT_DATE As String = Now
+                Dim UPDATE_BY As String = USERNAME
+                Dim UPDATE_DATE As String = Now
+                Dim INACTIVEDATE As String = Now
+                Dim ISACTIVE As String = ComboBoxEdit2.SelectedItem
+                Dim STATUS As String = TextEdit8.Text
+                SQL = "SELECT *FROM T_VENDOR WHERE VENDOR_CODE='" & TextEdit6.Text & "'"
+                If CheckRecord(SQL) = 0 Then
+                    SQL = "INSERT INTO T_VENDOR (VENDOR_CODE,VENDOR_NAME,NPWP,EMAIL,ADDRESS,POSTAL_CODE,STATE,COUNTRY,PHONE,MOBILEPHONE,FAX,CONTRACTPERSON,BANKACCOUNT,ACCOUNTGROUP,ACCOUNTGROUPN,INPUTBY,INPUTDATE,UPDATENY,UPDATEDATE,INACTIVEDATE,ISACTIVE,STATUS)" +
+                        "VALUES('" & VENCODE & "','" & VENNAME & "','" & NPWP & "','" & EMAIL & "','" & ADDRESS & "','" & POSTCODE & "','" & STATE & "','" & COUNTRY & "','" & PHONE & "','" & MPHONE & "','" & FAX & "','" & CP & "','" & BANKACC & "','" & ACCOUNTGROUP & "','" & ACCOUNTGROUPN & "','" & ISACTIVE & "','" & STATUS & "',)"
+                    ExecuteNonQuery(SQL)
+                    LoadUser()
+                    MsgBox("Insert  Successful", vbInformation, "Vendor")
+
+                    If CheckRecord(SQL) > 0 Then UpdateCode("VN")
+                    LoadUser()
+                    MsgBox("SAVE SUCCEDED", vbInformation, "Vendor")
+                    UnlockAll()
+                    ClearInputVN()
+                Else
+                    SQL = "UPDATE T_VENDOR SET VENDOR_CODE='" & VENCODE & "',VENDOR_NAME='" & VENNAME & "',NPWP='" & NPWP & "',EMAIL='" & EMAIL & "',ADDRESS='" & ADDRESS & "',POSTAL_CODE='" & POSTCODE & "',STATE='" & STATE & "',COUNTRY='" & COUNTRY & "',PHONE='" & PHONE & "',MOBILEPHONE='" & MPHONE & "',FAX='" & FAX & "',CONTACTPERSON='" & CP & "',,BANKACCOUNT='" & BANKACC & "',ACCOUNTGROUP='" & ACCOUNTGROUP & "',ACCOUNTGROUPN='" & ACCOUNTGROUPN & "',INACTIVEDATE='" & INACTIVEDATE & "',ISACTIVE='" & ISACTIVE & "',STATUS='" & STATUS & "'" +
+                       " WHERE VENDOR_CODE= '" & TextEdit6.Text & "'"
+                    ExecuteNonQuery(SQL)
+                    MsgBox("update SUCCEDED", vbInformation, "VENDOR")
+                    ClearInputVN()
+                End If
             End If
         End If
     End Sub
@@ -148,7 +154,7 @@ Public Class FrmVendorr
     End Sub
     Private Sub GridHeader()
         Dim view As ColumnView = CType(GridControl1.MainView, ColumnView)
-        Dim fieldNames() As String = New String() {"VEHICLE_TYPE", "TOLERANCE"}
+        Dim fieldNames() As String = New String() {"VENDOR_CODE", "VENDOR_NAME", "NPWP", "EMAIL", "ADDRESS", "POSTAL_CODE", "STATE", "COUNTRY", "PHONE", "MOBILEPHONNE", "FAX", "CONTACTPERSON", "BANKACCOUNT", "ACCOUNTGROUP", "ACCOUNTGROUPN", "INPUTBY", "INPUTDATE", "UPDATEBY", "UPDATEDATE", "INACTIVEDATE", "ISACTIVE", "STATUS"}
         Dim I As Integer
         Dim Column As DevExpress.XtraGrid.Columns.GridColumn
 
@@ -224,15 +230,12 @@ Public Class FrmVendorr
         TextEdit13.Enabled = ""
         ComboBoxEdit2.Enabled = ""
         TextEdit8.Enabled = ""
-
-        SimpleButton1.Enabled = False 'add
-        SimpleButton2.Enabled = False 'save
-        SimpleButton3.Enabled = False 'delete
-        SimpleButton4.Enabled = False 'cancel
-        SimpleButton5.Enabled = False 'close
+        LockAll()
+        SimpleButton2.Text = "SAVE" 'SAVE
     End Sub
     Private Sub FrmVendorr_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Text = "VENDOR"
+        LoadUser()
         GridHeader()
         LockAll()
     End Sub
@@ -240,4 +243,43 @@ Public Class FrmVendorr
     Private Sub SimpleButton5_Click(sender As Object, e As EventArgs) Handles SimpleButton5.Click
         Me.Close()
     End Sub
+    Private Sub GridView1_RowCellClick(sender As Object, e As RowCellClickEventArgs) Handles GridView1.RowCellClick
+        If e.RowHandle < 0 Then
+            SimpleButton1.Enabled = True 'add
+            SimpleButton2.Enabled = False 'save
+            SimpleButton3.Enabled = False 'delete
+            SimpleButton4.Enabled = True 'cancel
+            SimpleButton5.Enabled = False 'close
+        Else
+            SimpleButton1.Enabled = False 'add
+            SimpleButton2.Enabled = True 'save
+            SimpleButton3.Enabled = True 'delete
+            SimpleButton4.Enabled = True 'cancel
+            SimpleButton5.Enabled = False 'close
+
+            SimpleButton1.Text = "update" 'save
+
+            TextEdit6.Text = GridView1.GetRowCellValue(e.RowHandle, "VENDOR_CODE").ToString()
+            TextEdit58.Text = GridView1.GetRowCellValue(e.RowHandle, "VENDOR_NAME").ToString()
+            TextEdit56.Text = GridView1.GetRowCellValue(e.RowHandle, "NPWP").ToString()
+            TextEdit53.Text = GridView1.GetRowCellValue(e.RowHandle, "EMAIL").ToString()
+            TextEdit57.Text = GridView1.GetRowCellValue(e.RowHandle, "ADDRESS").ToString()
+            TextEdit55.Text = GridView1.GetRowCellValue(e.RowHandle, "POSTAL_CODE").ToString()
+            TextEdit54.Text = GridView1.GetRowCellValue(e.RowHandle, "STATE").ToString()
+            TextEdit52.Text = GridView1.GetRowCellValue(e.RowHandle, "COUNTRY").ToString()
+            TextEdit50.Text = GridView1.GetRowCellValue(e.RowHandle, "PHONE").ToString()
+            TextEdit47.Text = GridView1.GetRowCellValue(e.RowHandle, "MOBILEPHONE").ToString()
+            TextEdit51.Text = GridView1.GetRowCellValue(e.RowHandle, "FAX").ToString()
+            TextEdit49.Text = GridView1.GetRowCellValue(e.RowHandle, "CONTACTPERSON").ToString()
+            TextEdit48.Text = GridView1.GetRowCellValue(e.RowHandle, "BANKACCOUNT").ToString()
+            TextEdit95.Text = GridView1.GetRowCellValue(e.RowHandle, "ACCOUNTGROUP").ToString()
+            TextEdit13.Text = GridView1.GetRowCellValue(e.RowHandle, "ACCOUNTGROUPN").ToString()
+            ComboBoxEdit2.SelectedItem = GridView1.GetRowCellValue(e.RowHandle, "ISACTIVE").ToString()
+            TextEdit8.Text = GridView1.GetRowCellValue(e.RowHandle, "STATUS").ToString()
+
+            TextEdit6.Enabled = False
+            UnlockAll()
+        End If
+    End Sub
+
 End Class

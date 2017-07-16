@@ -620,6 +620,7 @@ Partial Class FrmVendorr
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.PanelControl1)
         Me.Controls.Add(Me.BunifuGradientPanel2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmVendorr"
         Me.Text = "FrmVendor"
         CType(Me.PanelControl6, System.ComponentModel.ISupportInitialize).EndInit()

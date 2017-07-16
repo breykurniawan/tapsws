@@ -89,7 +89,7 @@ Public Class FrmDriver
             If Not IsEmptyCombo({ComboBoxEdit1}) Then
                 Dim DRIVERCODE As String = Trim(TextEdit1.Text)
                 Dim DRIVERNAME As String = TextEdit2.Text
-                Dim TRANSPORTERCODE As String = GetCodeTrans(ComboBoxEdit1)
+                Dim TRANSPORTERCODE As String = GetCodeTrans(ComboBoxEdit1.Text)
                 Dim LINCENSENUMBER As String = TextEdit3.Text
                 Dim STATUS As String = TextEdit4.Text
                 SQL = "Select * FROM T_DRIVER WHERE DRIVER_CODE='" & TextEdit1.Text & "'"

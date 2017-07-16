@@ -96,9 +96,9 @@ Partial Class FrmTransporter
         Me.LabelControl89.Appearance.Options.UseForeColor = True
         Me.LabelControl89.Location = New System.Drawing.Point(12, 15)
         Me.LabelControl89.Name = "LabelControl89"
-        Me.LabelControl89.Size = New System.Drawing.Size(59, 14)
+        Me.LabelControl89.Size = New System.Drawing.Size(91, 14)
         Me.LabelControl89.TabIndex = 0
-        Me.LabelControl89.Text = "Customer"
+        Me.LabelControl89.Text = "TRANSPORTER"
         '
         'Panel3
         '
@@ -206,9 +206,9 @@ Partial Class FrmTransporter
         Me.LabelControl87.Appearance.Options.UseFont = True
         Me.LabelControl87.Location = New System.Drawing.Point(12, 63)
         Me.LabelControl87.Name = "LabelControl87"
-        Me.LabelControl87.Size = New System.Drawing.Size(103, 13)
+        Me.LabelControl87.Size = New System.Drawing.Size(68, 13)
         Me.LabelControl87.TabIndex = 4
-        Me.LabelControl87.Text = "Transporter Name"
+        Me.LabelControl87.Text = "Transporter"
         '
         'LabelControl88
         '
@@ -418,6 +418,7 @@ Partial Class FrmTransporter
         Me.Controls.Add(Me.PanelControl6)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.BunifuGradientPanel2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmTransporter"
         Me.Text = "FrmTransporter"
         Me.BunifuGradientPanel2.ResumeLayout(False)

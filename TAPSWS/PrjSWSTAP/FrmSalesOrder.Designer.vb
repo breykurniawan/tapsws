@@ -26,14 +26,6 @@ Partial Class FrmSalesOrder
         Me.BunifuGradientPanel2 = New ns1.BunifuGradientPanel()
         Me.LabelControl89 = New DevExpress.XtraEditors.LabelControl()
         Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.LabelControl92 = New DevExpress.XtraEditors.LabelControl()
-        Me.LabelControl93 = New DevExpress.XtraEditors.LabelControl()
-        Me.PanelControl6 = New DevExpress.XtraEditors.PanelControl()
-        Me.SimpleButton4 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton5 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton3 = New DevExpress.XtraEditors.SimpleButton()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.LabelControl27 = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControl28 = New DevExpress.XtraEditors.LabelControl()
@@ -52,6 +44,14 @@ Partial Class FrmSalesOrder
         Me.LabelControl96 = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControl97 = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControl98 = New DevExpress.XtraEditors.LabelControl()
+        Me.LabelControl92 = New DevExpress.XtraEditors.LabelControl()
+        Me.LabelControl93 = New DevExpress.XtraEditors.LabelControl()
+        Me.PanelControl6 = New DevExpress.XtraEditors.PanelControl()
+        Me.SimpleButton4 = New DevExpress.XtraEditors.SimpleButton()
+        Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
+        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
+        Me.SimpleButton5 = New DevExpress.XtraEditors.SimpleButton()
+        Me.SimpleButton3 = New DevExpress.XtraEditors.SimpleButton()
         Me.TextEdit78 = New DevExpress.XtraEditors.TextEdit()
         Me.TextEdit80 = New DevExpress.XtraEditors.TextEdit()
         Me.TextEdit82 = New DevExpress.XtraEditors.TextEdit()
@@ -74,9 +74,9 @@ Partial Class FrmSalesOrder
         Me.TextEdit79 = New DevExpress.XtraEditors.TextEdit()
         Me.BunifuGradientPanel2.SuspendLayout()
         Me.Panel7.SuspendLayout()
+        Me.Panel6.SuspendLayout()
         CType(Me.PanelControl6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl6.SuspendLayout()
-        Me.Panel6.SuspendLayout()
         CType(Me.TextEdit78.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TextEdit80.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TextEdit82.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -140,104 +140,6 @@ Partial Class FrmSalesOrder
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(153, 576)
         Me.Panel7.TabIndex = 74
-        '
-        'LabelControl92
-        '
-        Me.LabelControl92.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.LabelControl92.Appearance.Options.UseFont = True
-        Me.LabelControl92.Location = New System.Drawing.Point(11, 112)
-        Me.LabelControl92.Name = "LabelControl92"
-        Me.LabelControl92.Size = New System.Drawing.Size(56, 13)
-        Me.LabelControl92.TabIndex = 4
-        Me.LabelControl92.Text = "Tolerance"
-        '
-        'LabelControl93
-        '
-        Me.LabelControl93.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.LabelControl93.Appearance.Options.UseFont = True
-        Me.LabelControl93.Location = New System.Drawing.Point(11, 90)
-        Me.LabelControl93.Name = "LabelControl93"
-        Me.LabelControl93.Size = New System.Drawing.Size(71, 13)
-        Me.LabelControl93.TabIndex = 3
-        Me.LabelControl93.Text = "Vehicle Type"
-        '
-        'PanelControl6
-        '
-        Me.PanelControl6.Controls.Add(Me.SimpleButton4)
-        Me.PanelControl6.Controls.Add(Me.SimpleButton2)
-        Me.PanelControl6.Controls.Add(Me.SimpleButton1)
-        Me.PanelControl6.Controls.Add(Me.SimpleButton5)
-        Me.PanelControl6.Controls.Add(Me.SimpleButton3)
-        Me.PanelControl6.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelControl6.Location = New System.Drawing.Point(153, 43)
-        Me.PanelControl6.Name = "PanelControl6"
-        Me.PanelControl6.Size = New System.Drawing.Size(866, 39)
-        Me.PanelControl6.TabIndex = 76
-        '
-        'SimpleButton4
-        '
-        Me.SimpleButton4.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.SimpleButton4.Appearance.ForeColor = System.Drawing.Color.Green
-        Me.SimpleButton4.Appearance.Options.UseFont = True
-        Me.SimpleButton4.Appearance.Options.UseForeColor = True
-        Me.SimpleButton4.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
-        Me.SimpleButton4.Location = New System.Drawing.Point(236, 5)
-        Me.SimpleButton4.Name = "SimpleButton4"
-        Me.SimpleButton4.Size = New System.Drawing.Size(75, 27)
-        Me.SimpleButton4.TabIndex = 53
-        Me.SimpleButton4.Text = "Cancel"
-        '
-        'SimpleButton2
-        '
-        Me.SimpleButton2.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.SimpleButton2.Appearance.ForeColor = System.Drawing.Color.Green
-        Me.SimpleButton2.Appearance.Options.UseFont = True
-        Me.SimpleButton2.Appearance.Options.UseForeColor = True
-        Me.SimpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
-        Me.SimpleButton2.Location = New System.Drawing.Point(82, 5)
-        Me.SimpleButton2.Name = "SimpleButton2"
-        Me.SimpleButton2.Size = New System.Drawing.Size(75, 27)
-        Me.SimpleButton2.TabIndex = 51
-        Me.SimpleButton2.Text = "Save"
-        '
-        'SimpleButton1
-        '
-        Me.SimpleButton1.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.SimpleButton1.Appearance.ForeColor = System.Drawing.Color.Green
-        Me.SimpleButton1.Appearance.Options.UseFont = True
-        Me.SimpleButton1.Appearance.Options.UseForeColor = True
-        Me.SimpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
-        Me.SimpleButton1.Location = New System.Drawing.Point(5, 5)
-        Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(75, 27)
-        Me.SimpleButton1.TabIndex = 50
-        Me.SimpleButton1.Text = "Add"
-        '
-        'SimpleButton5
-        '
-        Me.SimpleButton5.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.SimpleButton5.Appearance.ForeColor = System.Drawing.Color.Green
-        Me.SimpleButton5.Appearance.Options.UseFont = True
-        Me.SimpleButton5.Appearance.Options.UseForeColor = True
-        Me.SimpleButton5.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
-        Me.SimpleButton5.Location = New System.Drawing.Point(313, 5)
-        Me.SimpleButton5.Name = "SimpleButton5"
-        Me.SimpleButton5.Size = New System.Drawing.Size(75, 27)
-        Me.SimpleButton5.TabIndex = 49
-        Me.SimpleButton5.Text = "Close"
-        '
-        'SimpleButton3
-        '
-        Me.SimpleButton3.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.SimpleButton3.Appearance.ForeColor = System.Drawing.Color.Green
-        Me.SimpleButton3.Appearance.Options.UseFont = True
-        Me.SimpleButton3.Appearance.Options.UseForeColor = True
-        Me.SimpleButton3.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
-        Me.SimpleButton3.Location = New System.Drawing.Point(159, 5)
-        Me.SimpleButton3.Name = "SimpleButton3"
-        Me.SimpleButton3.Size = New System.Drawing.Size(75, 27)
-        Me.SimpleButton3.TabIndex = 48
-        Me.SimpleButton3.Text = "Delete"
         '
         'Panel6
         '
@@ -436,6 +338,104 @@ Partial Class FrmSalesOrder
         Me.LabelControl98.TabIndex = 3
         Me.LabelControl98.Text = "Sales Order Number"
         '
+        'LabelControl92
+        '
+        Me.LabelControl92.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.LabelControl92.Appearance.Options.UseFont = True
+        Me.LabelControl92.Location = New System.Drawing.Point(11, 112)
+        Me.LabelControl92.Name = "LabelControl92"
+        Me.LabelControl92.Size = New System.Drawing.Size(56, 13)
+        Me.LabelControl92.TabIndex = 4
+        Me.LabelControl92.Text = "Tolerance"
+        '
+        'LabelControl93
+        '
+        Me.LabelControl93.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.LabelControl93.Appearance.Options.UseFont = True
+        Me.LabelControl93.Location = New System.Drawing.Point(11, 90)
+        Me.LabelControl93.Name = "LabelControl93"
+        Me.LabelControl93.Size = New System.Drawing.Size(71, 13)
+        Me.LabelControl93.TabIndex = 3
+        Me.LabelControl93.Text = "Vehicle Type"
+        '
+        'PanelControl6
+        '
+        Me.PanelControl6.Controls.Add(Me.SimpleButton4)
+        Me.PanelControl6.Controls.Add(Me.SimpleButton2)
+        Me.PanelControl6.Controls.Add(Me.SimpleButton1)
+        Me.PanelControl6.Controls.Add(Me.SimpleButton5)
+        Me.PanelControl6.Controls.Add(Me.SimpleButton3)
+        Me.PanelControl6.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PanelControl6.Location = New System.Drawing.Point(153, 43)
+        Me.PanelControl6.Name = "PanelControl6"
+        Me.PanelControl6.Size = New System.Drawing.Size(866, 39)
+        Me.PanelControl6.TabIndex = 76
+        '
+        'SimpleButton4
+        '
+        Me.SimpleButton4.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.SimpleButton4.Appearance.ForeColor = System.Drawing.Color.Green
+        Me.SimpleButton4.Appearance.Options.UseFont = True
+        Me.SimpleButton4.Appearance.Options.UseForeColor = True
+        Me.SimpleButton4.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
+        Me.SimpleButton4.Location = New System.Drawing.Point(236, 5)
+        Me.SimpleButton4.Name = "SimpleButton4"
+        Me.SimpleButton4.Size = New System.Drawing.Size(75, 27)
+        Me.SimpleButton4.TabIndex = 53
+        Me.SimpleButton4.Text = "Cancel"
+        '
+        'SimpleButton2
+        '
+        Me.SimpleButton2.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.SimpleButton2.Appearance.ForeColor = System.Drawing.Color.Green
+        Me.SimpleButton2.Appearance.Options.UseFont = True
+        Me.SimpleButton2.Appearance.Options.UseForeColor = True
+        Me.SimpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
+        Me.SimpleButton2.Location = New System.Drawing.Point(82, 5)
+        Me.SimpleButton2.Name = "SimpleButton2"
+        Me.SimpleButton2.Size = New System.Drawing.Size(75, 27)
+        Me.SimpleButton2.TabIndex = 51
+        Me.SimpleButton2.Text = "Save"
+        '
+        'SimpleButton1
+        '
+        Me.SimpleButton1.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.SimpleButton1.Appearance.ForeColor = System.Drawing.Color.Green
+        Me.SimpleButton1.Appearance.Options.UseFont = True
+        Me.SimpleButton1.Appearance.Options.UseForeColor = True
+        Me.SimpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
+        Me.SimpleButton1.Location = New System.Drawing.Point(5, 5)
+        Me.SimpleButton1.Name = "SimpleButton1"
+        Me.SimpleButton1.Size = New System.Drawing.Size(75, 27)
+        Me.SimpleButton1.TabIndex = 50
+        Me.SimpleButton1.Text = "Add"
+        '
+        'SimpleButton5
+        '
+        Me.SimpleButton5.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.SimpleButton5.Appearance.ForeColor = System.Drawing.Color.Green
+        Me.SimpleButton5.Appearance.Options.UseFont = True
+        Me.SimpleButton5.Appearance.Options.UseForeColor = True
+        Me.SimpleButton5.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
+        Me.SimpleButton5.Location = New System.Drawing.Point(313, 5)
+        Me.SimpleButton5.Name = "SimpleButton5"
+        Me.SimpleButton5.Size = New System.Drawing.Size(75, 27)
+        Me.SimpleButton5.TabIndex = 49
+        Me.SimpleButton5.Text = "Close"
+        '
+        'SimpleButton3
+        '
+        Me.SimpleButton3.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.SimpleButton3.Appearance.ForeColor = System.Drawing.Color.Green
+        Me.SimpleButton3.Appearance.Options.UseFont = True
+        Me.SimpleButton3.Appearance.Options.UseForeColor = True
+        Me.SimpleButton3.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
+        Me.SimpleButton3.Location = New System.Drawing.Point(159, 5)
+        Me.SimpleButton3.Name = "SimpleButton3"
+        Me.SimpleButton3.Size = New System.Drawing.Size(75, 27)
+        Me.SimpleButton3.TabIndex = 48
+        Me.SimpleButton3.Text = "Delete"
+        '
         'TextEdit78
         '
         Me.TextEdit78.EnterMoveNextControl = True
@@ -632,16 +632,17 @@ Partial Class FrmSalesOrder
         Me.Controls.Add(Me.PanelControl6)
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.BunifuGradientPanel2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmSalesOrder"
         Me.Text = "FrmSalesOrder"
         Me.BunifuGradientPanel2.ResumeLayout(False)
         Me.BunifuGradientPanel2.PerformLayout()
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
-        CType(Me.PanelControl6, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelControl6.ResumeLayout(False)
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
+        CType(Me.PanelControl6, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelControl6.ResumeLayout(False)
         CType(Me.TextEdit78.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TextEdit80.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TextEdit82.Properties, System.ComponentModel.ISupportInitialize).EndInit()

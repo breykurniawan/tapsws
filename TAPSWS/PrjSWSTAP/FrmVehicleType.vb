@@ -18,14 +18,14 @@ Public Class FrmVehicleType
     End Sub
 
     Private Sub UnlockAll()
-        TextEdit74.Enabled = False
-        TextEdit81.Enabled = False
+        TextEdit74.Enabled = True
+        TextEdit81.Enabled = True
 
         SimpleButton1.Enabled = False 'add
-        SimpleButton2.Enabled = False 'save
-        SimpleButton3.Enabled = False 'delete
-        SimpleButton4.Enabled = False 'cancel
-        SimpleButton5.Enabled = False 'close
+        SimpleButton2.Enabled = True 'save
+        SimpleButton3.Enabled = True 'delete
+        SimpleButton4.Enabled = True 'cancel
+        SimpleButton5.Enabled = True 'close
     End Sub
     Private Sub LockAll()
         TextEdit74.Enabled = False
@@ -41,8 +41,11 @@ Public Class FrmVehicleType
     Private Sub ClearInputVT()
         TextEdit74.Text = ""
         TextEdit81.Text = ""
-        SimpleButton1.Enabled = False
-        SimpleButton3.Enabled = False
+        SimpleButton1.Enabled = True 'add
+        SimpleButton2.Enabled = False 'save
+        SimpleButton3.Enabled = False 'delete
+        SimpleButton4.Enabled = False 'cancel
+        SimpleButton5.Enabled = False 'close
     End Sub
     Private Sub GridHeader()
         Dim view As ColumnView = CType(GridControl5.MainView, ColumnView)
@@ -69,18 +72,18 @@ Public Class FrmVehicleType
         GridView.ExpandAllGroups()
 
     End Sub
-    Private Sub LoadView()
-        'vt
-        SQL = ("SELECT VEHICLE_CODE AS VEHICLETYPECODE,TOLERANCE FROM T_VEHICLET ORDER BY VEHICLE_CODE ")
-        GridControl5.DataSource = Nothing
-        FILLGridView(SQL, GridControl5)
-    End Sub
+    ' Private Sub LoadView()
+    'vt
+    '    SQL = ("SELECT VEHICLE_CODE AS VEHICLETYPECODE,TOLERANCE FROM T_VEHICLET ORDER BY VEHICLE_CODE ")
+    '   GridControl5.DataSource = Nothing
+    '  FILLGridView(SQL, GridControl5)
+    'End Sub
     Private Sub LoadUser()
-        SQL = "SELECT VEHICLE_CODE,TOLERANCE" +
+        SQL = "SELECT VEHICLE_TYPE,TOLERANCE" +
             "FROM T_VHECILET A" +
-            "LEFT JOIN VEHICLE_CODE B On A.VEHICLETYPECODE And B.aktif='Y' " +
+            "LEFT JOIN VEHICLE_TYPE B On A.VEHICLETYPECODE And B.aktif='Y' " +
             "WHERE A.AKTIF='Y'" +
-            "ORDER BY VEHICLE_CODE"
+            "ORDER BY VEHICLE_TYPE"
         FILLGridView(SQL, GridControl5)
 
         GridControl5.DataSource = ExecuteQuery(SQL)
@@ -91,40 +94,43 @@ Public Class FrmVehicleType
     Private Sub FrmVehicleType_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Text = "VEHICLETYPE"
         GridHeader()
+        LoadUser()
         LockAll()
     End Sub
 
 
     Private Sub SimpleButton2_Click(sender As Object, e As EventArgs) Handles SimpleButton2.Click
         'SAVE VEHICLE TYPE
-        If Not IsEmptyCombo({TextEdit74}) Then
-            If Not IsEmptyText({TextEdit74, TextEdit81}) Then
-                SQL = " SELECT * FROM T_VEHICLET WHERE VEHICLE_CODE='" & TextEdit74.Text & "'"
-                Dim VEHICLETYPECODE As String = TextEdit74.Text
-                Dim TOLERANCE As String = TextEdit81.Text
-                If CheckRecord(SQL) = 0 Then
-                    SQL = "INSERT INTO T_VEHICLET (VEHICLE_CODE,TOLERANCE)" +
-                    " VALUES('" & VEHICLETYPECODE & "','" & TOLERANCE & "')"
-                    ExecuteNonQuery(SQL)
-                    SQL = "SELECT FROM T_VEHICLET WHERE VEHICLE_CODE='" & TextEdit74.Text & "'"
-                    If CheckRecord(SQL) > 0 Then UpdateCode("VT")
-                    LoadView()
-                    MsgBox("SAVE SUCCEDED", vbInformation, "VEHICLE_CODE")
-                    UnlockAll()
-                    ClearInputVT()
-                Else
-                    SQL = "UPDATE T_VEHICLET SET VEHICLE_CODE='" & VEHICLETYPECODE & "',TOLERANCE='" & TOLERANCE & "'," +
-                 " WHERE VEHICLE_CODE= '" & TextEdit74.Text & "'"
-                    ExecuteNonQuery(SQL)
-                    MsgBox("SAVE SUCCEDED", vbInformation, "VEHICLE TYPE")
-                End If
+        If Not IsEmptyText({TextEdit74, TextEdit81}) = True Then
+            SQL = " SELECT * FROM T_VEHICLETYPE WHERE VEHICLE_CODE='" & TextEdit74.Text & "'"
+            Dim VEHICLETYPECODE As String = TextEdit74.Text
+            Dim TOLERANCE As String = TextEdit81.Text
+            If CheckRecord(SQL) = 0 Then
+                SQL = "INSERT INTO T_VEHICLETYPE (VEHICLE_TYPE,TOLERANCE)" +
+                " VALUES('" & VEHICLETYPECODE & "','" & TOLERANCE & "')"
+                ExecuteNonQuery(SQL)
+                LoadUser()
+                MsgBox("Insert  Successful", vbInformation, "VehicleType")
+
+                If CheckRecord(SQL) > 0 Then UpdateCode("VT")
+                LoadUser()
+                MsgBox("SAVE SUCCEDED", vbInformation, "VEHICLE_CODE")
+                UnlockAll()
+                ClearInputVT()
+            Else
+                SQL = "UPDATE T_VEHICLETYPE SET VEHICLE_TYPE='" & VEHICLETYPECODE & "',TOLERANCE='" & TOLERANCE & "'," +
+             " WHERE VEHICLE_CODE= '" & TextEdit74.Text & "'"
+                ExecuteNonQuery(SQL)
+                MsgBox("UPDATE SUCCEDED", vbInformation, "VEHICLE TYPE")
+                ClearInputVT()
             End If
         End If
+
     End Sub
 
     Private Sub SimpleButton3_Click(sender As Object, e As EventArgs) Handles SimpleButton3.Click
         ' DELETE VEHICLE TYPE
-        SQL = "UPDATE T_VEHICLET SET AKTIF= 'N' WHERE VEHICLE_TYPE'" & TextEdit74.Text & "'"
+        SQL = "UPDATE T_VEHICLETYPE SET AKTIF= 'N' WHERE VEHICLE_TYPE'" & TextEdit74.Text & "'"
         ExecuteNonQuery(SQL)
         LoadUser()
         MsgBox("Delete Successful", vbInformation, "VEHICLETYPE")
@@ -133,10 +139,34 @@ Public Class FrmVehicleType
         'cancel
         TextEdit74.Text = ""
         TextEdit81.Text = ""
+        SimpleButton2.Text = "SAVE" 'SAVE
     End Sub
 
     Private Sub SimpleButton5_Click(sender As Object, e As EventArgs) Handles SimpleButton5.Click
         Me.Close()
 
+    End Sub
+    Private Sub GridView5_RowCellClick(sender As Object, e As RowCellClickEventArgs) Handles GridView5.RowCellClick
+        If e.RowHandle < 0 Then
+            SimpleButton1.Enabled = True 'add
+            SimpleButton2.Enabled = False 'save
+            SimpleButton3.Enabled = False 'delete
+            SimpleButton4.Enabled = True 'cancel
+            SimpleButton5.Enabled = False 'close
+        Else
+            SimpleButton1.Enabled = False 'add
+            SimpleButton2.Enabled = True 'save
+            SimpleButton3.Enabled = True 'delete
+            SimpleButton4.Enabled = True 'cancel
+            SimpleButton5.Enabled = False 'close
+
+            SimpleButton1.Text = "update" 'save
+
+            TextEdit74.Text = GridView5.GetRowCellValue(e.RowHandle, "VEHICLE_TYPE").ToString() 'VEHICLE_TYPE
+            TextEdit81.Text = GridView5.GetRowCellValue(e.RowHandle, "TOLECRANCE").ToString() 'TOLERANCE
+
+            TextEdit74.Enabled = False
+            UnlockAll()
+        End If
     End Sub
 End Class

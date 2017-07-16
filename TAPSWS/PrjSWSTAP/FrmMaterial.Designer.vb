@@ -480,6 +480,7 @@ Partial Class FrmMaterial
         Me.Controls.Add(Me.PanelControl6)
         Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.BunifuGradientPanel2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmMaterial"
         Me.Text = "FrmMaterial"
         Me.BunifuGradientPanel2.ResumeLayout(False)
