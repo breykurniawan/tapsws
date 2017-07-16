@@ -127,7 +127,7 @@ Module ModuleSWS
 
     Public blobParameter As New OracleParameter
 
-
+    Public StatusSite As Boolean = False
 
     Delegate Sub SetTextCallback(ByVal [text] As String) 'Added to prevent threading errors during receiveing of data
 
@@ -771,6 +771,27 @@ Module ModuleSWS
         CMD = Nothing
         Return GetCodeUser
     End Function
+
+    Public Function GetCodeTrans(ByVal UNAME As String) As String
+        GetCodeTrans = ""
+        If Not OpenConnLocal() Then
+            Exit Function
+        End If
+        Try
+            Dim strsql As String = "SELECT TRANSPORTER_CODE AS CODE FROM T_TRANSPORTER WHERE TRANSPORTER_NAME='" & UNAME & "'"
+            CMD = New OracleCommand(strsql, CONN)
+            Dim rdr As OracleDataReader = CMD.ExecuteReader
+            While rdr.Read
+                GetCodeTrans = rdr("CODE").ToString
+            End While
+            rdr.Close()
+        Catch
+        End Try
+        CMD = Nothing
+        Return GetCodeTrans
+    End Function
+
+
     Public Function GetCodeRole(ByVal nRole As String) As String
         GetCodeRole = ""
         If Not OpenConnLocal() Then
