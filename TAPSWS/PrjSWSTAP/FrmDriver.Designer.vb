@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmDriver
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,15 +20,13 @@ Partial Class FrmDriver
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmDriver))
         Me.BunifuGradientPanel2 = New ns1.BunifuGradientPanel()
         Me.LabelControl89 = New DevExpress.XtraEditors.LabelControl()
         Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.LabelControl101 = New DevExpress.XtraEditors.LabelControl()
-        Me.LabelControl102 = New DevExpress.XtraEditors.LabelControl()
-        Me.LabelControl120 = New DevExpress.XtraEditors.LabelControl()
+        Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControl124 = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControl127 = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControl129 = New DevExpress.XtraEditors.LabelControl()
@@ -41,26 +39,22 @@ Partial Class FrmDriver
         Me.SimpleButton3 = New DevExpress.XtraEditors.SimpleButton()
         Me.GridControl8 = New DevExpress.XtraGrid.GridControl()
         Me.GridView8 = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.TextEdit115 = New DevExpress.XtraEditors.TextEdit()
-        Me.ComboBoxEdit13 = New DevExpress.XtraEditors.ComboBoxEdit()
-        Me.TextEdit61 = New DevExpress.XtraEditors.TextEdit()
-        Me.TextEdit89 = New DevExpress.XtraEditors.TextEdit()
-        Me.TextEdit106 = New DevExpress.XtraEditors.TextEdit()
-        Me.TextEdit109 = New DevExpress.XtraEditors.TextEdit()
-        Me.TextEdit111 = New DevExpress.XtraEditors.TextEdit()
+        Me.TextEdit1 = New DevExpress.XtraEditors.TextEdit()
+        Me.TextEdit2 = New DevExpress.XtraEditors.TextEdit()
+        Me.TextEdit3 = New DevExpress.XtraEditors.TextEdit()
+        Me.TextEdit4 = New DevExpress.XtraEditors.TextEdit()
+        Me.ComboBoxEdit1 = New DevExpress.XtraEditors.ComboBoxEdit()
         Me.BunifuGradientPanel2.SuspendLayout()
         Me.Panel9.SuspendLayout()
         CType(Me.PanelControl6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl6.SuspendLayout()
         CType(Me.GridControl8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TextEdit115.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ComboBoxEdit13.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TextEdit61.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TextEdit89.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TextEdit106.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TextEdit109.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TextEdit111.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TextEdit2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TextEdit3.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TextEdit4.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ComboBoxEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BunifuGradientPanel2
@@ -87,16 +81,14 @@ Partial Class FrmDriver
         Me.LabelControl89.Appearance.Options.UseForeColor = True
         Me.LabelControl89.Location = New System.Drawing.Point(12, 15)
         Me.LabelControl89.Name = "LabelControl89"
-        Me.LabelControl89.Size = New System.Drawing.Size(59, 14)
+        Me.LabelControl89.Size = New System.Drawing.Size(48, 14)
         Me.LabelControl89.TabIndex = 0
-        Me.LabelControl89.Text = "Customer"
+        Me.LabelControl89.Text = "DRIVER"
         '
         'Panel9
         '
         Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Panel9.Controls.Add(Me.LabelControl101)
-        Me.Panel9.Controls.Add(Me.LabelControl102)
-        Me.Panel9.Controls.Add(Me.LabelControl120)
+        Me.Panel9.Controls.Add(Me.LabelControl1)
         Me.Panel9.Controls.Add(Me.LabelControl124)
         Me.Panel9.Controls.Add(Me.LabelControl127)
         Me.Panel9.Controls.Add(Me.LabelControl129)
@@ -108,41 +100,21 @@ Partial Class FrmDriver
         Me.Panel9.Size = New System.Drawing.Size(153, 576)
         Me.Panel9.TabIndex = 74
         '
-        'LabelControl101
+        'LabelControl1
         '
-        Me.LabelControl101.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.LabelControl101.Appearance.Options.UseFont = True
-        Me.LabelControl101.Location = New System.Drawing.Point(12, 177)
-        Me.LabelControl101.Name = "LabelControl101"
-        Me.LabelControl101.Size = New System.Drawing.Size(37, 13)
-        Me.LabelControl101.TabIndex = 16
-        Me.LabelControl101.Text = "Status"
-        '
-        'LabelControl102
-        '
-        Me.LabelControl102.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.LabelControl102.Appearance.Options.UseFont = True
-        Me.LabelControl102.Location = New System.Drawing.Point(12, 154)
-        Me.LabelControl102.Name = "LabelControl102"
-        Me.LabelControl102.Size = New System.Drawing.Size(77, 13)
-        Me.LabelControl102.TabIndex = 15
-        Me.LabelControl102.Text = "Inactive Date"
-        '
-        'LabelControl120
-        '
-        Me.LabelControl120.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.LabelControl120.Appearance.Options.UseFont = True
-        Me.LabelControl120.Location = New System.Drawing.Point(12, 131)
-        Me.LabelControl120.Name = "LabelControl120"
-        Me.LabelControl120.Size = New System.Drawing.Size(47, 13)
-        Me.LabelControl120.TabIndex = 13
-        Me.LabelControl120.Text = "Inactive"
+        Me.LabelControl1.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.LabelControl1.Appearance.Options.UseFont = True
+        Me.LabelControl1.Location = New System.Drawing.Point(12, 140)
+        Me.LabelControl1.Name = "LabelControl1"
+        Me.LabelControl1.Size = New System.Drawing.Size(37, 13)
+        Me.LabelControl1.TabIndex = 10
+        Me.LabelControl1.Text = "Status"
         '
         'LabelControl124
         '
         Me.LabelControl124.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.LabelControl124.Appearance.Options.UseFont = True
-        Me.LabelControl124.Location = New System.Drawing.Point(12, 112)
+        Me.LabelControl124.Location = New System.Drawing.Point(12, 120)
         Me.LabelControl124.Name = "LabelControl124"
         Me.LabelControl124.Size = New System.Drawing.Size(89, 13)
         Me.LabelControl124.TabIndex = 9
@@ -152,27 +124,27 @@ Partial Class FrmDriver
         '
         Me.LabelControl127.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.LabelControl127.Appearance.Options.UseFont = True
-        Me.LabelControl127.Location = New System.Drawing.Point(12, 90)
+        Me.LabelControl127.Location = New System.Drawing.Point(12, 96)
         Me.LabelControl127.Name = "LabelControl127"
-        Me.LabelControl127.Size = New System.Drawing.Size(92, 13)
+        Me.LabelControl127.Size = New System.Drawing.Size(61, 13)
         Me.LabelControl127.TabIndex = 6
-        Me.LabelControl127.Text = "Trasporter Code"
+        Me.LabelControl127.Text = "Trasporter"
         '
         'LabelControl129
         '
         Me.LabelControl129.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.LabelControl129.Appearance.Options.UseFont = True
-        Me.LabelControl129.Location = New System.Drawing.Point(12, 68)
+        Me.LabelControl129.Location = New System.Drawing.Point(12, 72)
         Me.LabelControl129.Name = "LabelControl129"
-        Me.LabelControl129.Size = New System.Drawing.Size(70, 13)
+        Me.LabelControl129.Size = New System.Drawing.Size(35, 13)
         Me.LabelControl129.TabIndex = 4
-        Me.LabelControl129.Text = "Driver Name"
+        Me.LabelControl129.Text = "Driver"
         '
         'LabelControl130
         '
         Me.LabelControl130.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.LabelControl130.Appearance.Options.UseFont = True
-        Me.LabelControl130.Location = New System.Drawing.Point(12, 46)
+        Me.LabelControl130.Location = New System.Drawing.Point(12, 48)
         Me.LabelControl130.Name = "LabelControl130"
         Me.LabelControl130.Size = New System.Drawing.Size(66, 13)
         Me.LabelControl130.TabIndex = 3
@@ -258,10 +230,10 @@ Partial Class FrmDriver
         '
         'GridControl8
         '
-        Me.GridControl8.Location = New System.Drawing.Point(155, 288)
+        Me.GridControl8.Location = New System.Drawing.Point(159, 210)
         Me.GridControl8.MainView = Me.GridView8
         Me.GridControl8.Name = "GridControl8"
-        Me.GridControl8.Size = New System.Drawing.Size(1019, 368)
+        Me.GridControl8.Size = New System.Drawing.Size(1015, 446)
         Me.GridControl8.TabIndex = 84
         Me.GridControl8.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView8})
         '
@@ -271,83 +243,62 @@ Partial Class FrmDriver
         Me.GridView8.Name = "GridView8"
         Me.GridView8.OptionsView.ShowGroupPanel = False
         '
-        'TextEdit115
+        'TextEdit1
         '
-        Me.TextEdit115.EnterMoveNextControl = True
-        Me.TextEdit115.Location = New System.Drawing.Point(159, 195)
-        Me.TextEdit115.Name = "TextEdit115"
-        Me.TextEdit115.Size = New System.Drawing.Size(236, 20)
-        Me.TextEdit115.TabIndex = 82
+        Me.TextEdit1.EnterMoveNextControl = True
+        Me.TextEdit1.Location = New System.Drawing.Point(159, 88)
+        Me.TextEdit1.Name = "TextEdit1"
+        Me.TextEdit1.Size = New System.Drawing.Size(236, 20)
+        Me.TextEdit1.TabIndex = 85
         '
-        'ComboBoxEdit13
+        'TextEdit2
         '
-        Me.ComboBoxEdit13.AllowDrop = True
-        Me.ComboBoxEdit13.EditValue = ""
-        Me.ComboBoxEdit13.EnterMoveNextControl = True
-        Me.ComboBoxEdit13.Location = New System.Drawing.Point(158, 174)
-        Me.ComboBoxEdit13.Name = "ComboBoxEdit13"
-        Me.ComboBoxEdit13.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.ComboBoxEdit13.Properties.Items.AddRange(New Object() {"Y", "N"})
-        Me.ComboBoxEdit13.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
-        Me.ComboBoxEdit13.Size = New System.Drawing.Size(236, 20)
-        Me.ComboBoxEdit13.TabIndex = 81
+        Me.TextEdit2.EnterMoveNextControl = True
+        Me.TextEdit2.Location = New System.Drawing.Point(159, 111)
+        Me.TextEdit2.Name = "TextEdit2"
+        Me.TextEdit2.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TextEdit2.Size = New System.Drawing.Size(236, 20)
+        Me.TextEdit2.TabIndex = 86
         '
-        'TextEdit61
+        'TextEdit3
         '
-        Me.TextEdit61.EnterMoveNextControl = True
-        Me.TextEdit61.Location = New System.Drawing.Point(159, 86)
-        Me.TextEdit61.Name = "TextEdit61"
-        Me.TextEdit61.Size = New System.Drawing.Size(236, 20)
-        Me.TextEdit61.TabIndex = 77
+        Me.TextEdit3.EnterMoveNextControl = True
+        Me.TextEdit3.Location = New System.Drawing.Point(159, 157)
+        Me.TextEdit3.Name = "TextEdit3"
+        Me.TextEdit3.Size = New System.Drawing.Size(236, 20)
+        Me.TextEdit3.TabIndex = 87
         '
-        'TextEdit89
+        'TextEdit4
         '
-        Me.TextEdit89.EnterMoveNextControl = True
-        Me.TextEdit89.Location = New System.Drawing.Point(159, 217)
-        Me.TextEdit89.Name = "TextEdit89"
-        Me.TextEdit89.Size = New System.Drawing.Size(236, 20)
-        Me.TextEdit89.TabIndex = 83
+        Me.TextEdit4.EnterMoveNextControl = True
+        Me.TextEdit4.Location = New System.Drawing.Point(159, 180)
+        Me.TextEdit4.Name = "TextEdit4"
+        Me.TextEdit4.Size = New System.Drawing.Size(236, 20)
+        Me.TextEdit4.TabIndex = 88
         '
-        'TextEdit106
+        'ComboBoxEdit1
         '
-        Me.TextEdit106.EnterMoveNextControl = True
-        Me.TextEdit106.Location = New System.Drawing.Point(158, 152)
-        Me.TextEdit106.Name = "TextEdit106"
-        Me.TextEdit106.Size = New System.Drawing.Size(236, 20)
-        Me.TextEdit106.TabIndex = 80
-        '
-        'TextEdit109
-        '
-        Me.TextEdit109.EnterMoveNextControl = True
-        Me.TextEdit109.Location = New System.Drawing.Point(158, 130)
-        Me.TextEdit109.Name = "TextEdit109"
-        Me.TextEdit109.Size = New System.Drawing.Size(236, 20)
-        Me.TextEdit109.TabIndex = 79
-        '
-        'TextEdit111
-        '
-        Me.TextEdit111.EnterMoveNextControl = True
-        Me.TextEdit111.Location = New System.Drawing.Point(158, 108)
-        Me.TextEdit111.Name = "TextEdit111"
-        Me.TextEdit111.Size = New System.Drawing.Size(236, 20)
-        Me.TextEdit111.TabIndex = 78
+        Me.ComboBoxEdit1.Location = New System.Drawing.Point(159, 134)
+        Me.ComboBoxEdit1.Name = "ComboBoxEdit1"
+        Me.ComboBoxEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.ComboBoxEdit1.Size = New System.Drawing.Size(236, 20)
+        Me.ComboBoxEdit1.TabIndex = 89
         '
         'FrmDriver
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1019, 619)
+        Me.Controls.Add(Me.ComboBoxEdit1)
+        Me.Controls.Add(Me.TextEdit4)
+        Me.Controls.Add(Me.TextEdit3)
+        Me.Controls.Add(Me.TextEdit2)
+        Me.Controls.Add(Me.TextEdit1)
         Me.Controls.Add(Me.GridControl8)
-        Me.Controls.Add(Me.TextEdit115)
-        Me.Controls.Add(Me.ComboBoxEdit13)
-        Me.Controls.Add(Me.TextEdit61)
-        Me.Controls.Add(Me.TextEdit89)
-        Me.Controls.Add(Me.TextEdit106)
-        Me.Controls.Add(Me.TextEdit109)
-        Me.Controls.Add(Me.TextEdit111)
         Me.Controls.Add(Me.PanelControl6)
         Me.Controls.Add(Me.Panel9)
         Me.Controls.Add(Me.BunifuGradientPanel2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmDriver"
         Me.Text = "FrmDriver"
         Me.BunifuGradientPanel2.ResumeLayout(False)
@@ -358,13 +309,11 @@ Partial Class FrmDriver
         Me.PanelControl6.ResumeLayout(False)
         CType(Me.GridControl8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TextEdit115.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ComboBoxEdit13.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TextEdit61.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TextEdit89.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TextEdit106.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TextEdit109.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TextEdit111.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TextEdit2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TextEdit3.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TextEdit4.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ComboBoxEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -372,12 +321,8 @@ Partial Class FrmDriver
     Friend WithEvents BunifuGradientPanel2 As ns1.BunifuGradientPanel
     Friend WithEvents LabelControl89 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents Panel9 As Panel
-    Friend WithEvents LabelControl101 As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents LabelControl102 As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents LabelControl120 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents LabelControl124 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents LabelControl127 As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents LabelControl129 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents LabelControl130 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents PanelControl6 As DevExpress.XtraEditors.PanelControl
     Friend WithEvents SimpleButton4 As DevExpress.XtraEditors.SimpleButton
@@ -387,11 +332,11 @@ Partial Class FrmDriver
     Friend WithEvents SimpleButton3 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents GridControl8 As DevExpress.XtraGrid.GridControl
     Friend WithEvents GridView8 As DevExpress.XtraGrid.Views.Grid.GridView
-    Friend WithEvents TextEdit115 As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents ComboBoxEdit13 As DevExpress.XtraEditors.ComboBoxEdit
-    Friend WithEvents TextEdit61 As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents TextEdit89 As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents TextEdit106 As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents TextEdit109 As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents TextEdit111 As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents LabelControl1 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents TextEdit1 As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TextEdit2 As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TextEdit3 As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TextEdit4 As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents LabelControl129 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents ComboBoxEdit1 As DevExpress.XtraEditors.ComboBoxEdit
 End Class
