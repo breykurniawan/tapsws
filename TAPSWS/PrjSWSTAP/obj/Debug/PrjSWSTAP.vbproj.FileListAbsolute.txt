@@ -132,3 +132,10 @@ D:\TIMBANGAN\TAPSWS\Aplikasi SWS TAP\PrjSWSTAP\obj\Debug\PrjSWSTAP.FrmVehicle.re
 D:\TIMBANGAN\TAPSWS\Aplikasi SWS TAP\PrjSWSTAP\obj\Debug\PrjSWSTAP.FrmVehicleType.resources
 D:\TIMBANGAN\TAPSWS\Aplikasi SWS TAP\PrjSWSTAP\obj\Debug\PrjSWSTAP.FrmVendorr.resources
 D:\TIMBANGAN\TAPSWS\Aplikasi SWS TAP\PrjSWSTAP\obj\Debug\PrjSWSTAP.FrrmCustomer.resources
+D:\TIMBANGAN\GITHUB\TAPSWS\PrjSWSTAP\bin\Debug\SWS.exe.config
+D:\TIMBANGAN\GITHUB\TAPSWS\PrjSWSTAP\obj\Debug\Interop.AXVLC.dll
+D:\TIMBANGAN\GITHUB\TAPSWS\PrjSWSTAP\obj\Debug\AxInterop.AXVLC.dll
+D:\TIMBANGAN\GITHUB\TAPSWS\PrjSWSTAP\obj\Debug\PrjSWSTAP.vbproj.ResolveComReference.cache
+D:\TIMBANGAN\GITHUB\TAPSWS\PrjSWSTAP\obj\Debug\SWS.exe
+D:\TIMBANGAN\GITHUB\TAPSWS\PrjSWSTAP\obj\Debug\SWS.xml
+D:\TIMBANGAN\GITHUB\TAPSWS\PrjSWSTAP\obj\Debug\SWS.pdb
